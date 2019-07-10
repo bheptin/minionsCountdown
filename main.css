@@ -1,0 +1,105 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#demo {
+    background: rgba(120, 199, 209, 0); 
+    z-index: 1;
+}
+p {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+.pics {
+    height: 100%;
+    
+}
+
+.panel {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: table;
+    margin: 0;
+    background: #1c1c1c;
+    padding: 0 0;
+    position: absolute;
+    background: center fixed;
+    background-size: cover;
+}
+
+.panel .inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.backgroundimg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+@keyframes backgroundchangeFadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes backgroundchangeFadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+{
+animation-name: backgroundchangeFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 2s;
+
+-webkit-animation-name: backgroundchangeFadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 2s;
+
+}
