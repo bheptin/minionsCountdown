@@ -1,105 +1,100 @@
-
-
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+* {
+  box-sizing:border-box;
 }
 
 #demo {
-    background: rgba(120, 199, 209, 0); 
-    z-index: 1;
+  text-align: center;
+  font-size: xx-large;
 }
-p {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-.pics {
-    height: 100%;
-    
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-.panel {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    color: white;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: table;
-    margin: 0;
-    background: #1c1c1c;
-    padding: 0 0;
-    position: absolute;
-    background: center fixed;
-    background-size: cover;
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-.panel .inner {
-    display: table-cell;
-    vertical-align: middle;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.backgroundimg {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-@keyframes backgroundchangeFadeInOut {
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-@-webkit-keyframes backgroundchangeFadeInOut {
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-{
-animation-name: backgroundchangeFadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 2s;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
--webkit-animation-name: backgroundchangeFadeInOut;
--webkit-animation-timing-function: ease-in-out;
--webkit-animation-iteration-count: infinite;
--webkit-animation-duration: 2s;
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
